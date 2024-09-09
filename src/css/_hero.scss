@@ -1,0 +1,75 @@
+/* Defining all the varaibles color global to use them */
+@use './variables' as *;
+
+@mixin FlexCenterCenter() {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+@mixin FlexCenterEvenly() {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+@mixin fontStyles($size, $weight, $letterSpacing: 0) {
+        font-size: $size;
+        font-weight: $weight;
+        letter-spacing: $letterSpacing;
+}
+
+/* main hero section */
+.app-hero{
+        width: 80%;
+        height: 80vh;
+        margin: 0 auto;
+        @include FlexCenterCenter();
+        flex-direction: column;
+}
+
+.app-hero-title{
+        color: $paragraphColorSecondary;
+        @include fontStyles(0.8rem, 600, 0.2rem);
+}
+
+.app-hero-subTitle{
+        @include fontStyles(4rem, 700);
+        text-align: center;
+        color: #0A2463;
+
+}
+
+.app-paragraph{
+        width: 50%;
+        text-align: center;
+        line-height: 1.7rem;
+        @include fontStyles(1.2rem, 400, 0.2rem);
+        color: $paragraphColorPrimary;
+}
+
+.button-group{
+        display: flex;
+        gap: 2rem;
+}
+
+.signup{
+        font-size: 1rem;
+        color: $backgroundColorWhite;
+        background-color:$buttonColorPrimary;
+        border: 1px solid $buttonColorPrimary;
+        padding: 20px 20px;
+        border-radius: 7px;
+        width: 8rem;
+        @include FlexCenterCenter();
+}
+
+.learn{
+        font-size: 1rem;
+        color: $buttonColorPrimary;
+        padding: 20px 20px;
+        width: 8rem;
+        @include FlexCenterCenter();
+        border: none;   
+}
+

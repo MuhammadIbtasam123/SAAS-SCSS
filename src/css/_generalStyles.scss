@@ -1,0 +1,11 @@
+/* Defining all the varaibles color global to use them */
+@use './variables' as *;
+
+body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        background-color:$backgroundColorHeroArea;
+        height: 125vh;
+}

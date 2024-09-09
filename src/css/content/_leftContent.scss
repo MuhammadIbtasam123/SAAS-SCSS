@@ -1,0 +1,67 @@
+/* Defining all the varaibles color global to use them */
+
+@use '../variables' as *;
+
+@mixin FlexCenterCenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+.content{
+        margin-top: 0;
+        background-color: $backgroundColorWhite;
+        height: 50vh;
+        display: flex;
+        padding: 5rem 10rem;
+}
+.content-paragraph{
+        margin-top: 0;
+        color: $paragraphColorSecondary;
+        letter-spacing: 0.2rem;
+        font-weight: 600;
+}
+
+.content-heading{
+        font-size: 2rem;
+        text-align: left;
+        color: #0A2463;
+        font-weight: 700;
+}
+
+.content-heading-para{
+        width: 80%;
+        text-align: left;
+        line-height: 1.7rem;
+        font-size: 1.2rem;
+        font-weight: 00;
+        color: $paragraphColorPrimary;
+        letter-spacing: 0.2rem;
+}
+
+.content-button-group{
+        display: flex;
+        gap: 1rem;
+
+}
+
+.content-signup{
+        font-size: 1rem;
+        color: $backgroundColorWhite;
+        background-color:$mainHeadingColor;
+        border: 1px solid $mainHeadingColor;
+        padding: 20px 20px;
+        border-radius: 7px;
+        width: 8rem;
+        @include FlexCenterCenter();
+}
+
+.content-learnMore{
+        font-size: 1rem;
+        color: $mainHeadingColor;
+        padding: 20px 20px;
+        width: 8rem;
+        @include FlexCenterCenter();
+        border: none; 
+        background-color: $backgroundColorWhite;
+}

@@ -1,0 +1,62 @@
+/* Defining all the varaibles color global to use them */
+@use '../variables' as *;
+
+
+@mixin flexCenter{
+        display: flex;
+        align-items: center;
+}
+
+@mixin FlexCenterCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.content-list ul {
+        list-style-type: none;
+        padding: 1rem 2rem;
+        background-color: #dadfe971;
+        border-radius:5px ;
+    }
+    
+    .flex-item {
+        @include flexCenter();
+        gap: 15px; 
+        margin-bottom: 20px; 
+        /* padding: 1.1rem; */
+    }
+    
+    .circle {
+        width: 100px;
+        height: 50px;
+        border-radius: 50%;
+        @include FlexCenterCenter();
+        font-size: 1.2rem;
+        color: $backgroundColorWhite;
+        font-weight: bold;
+        background-color: #3498db; 
+    }
+    
+    // inheritance - extending the circle properties 
+    .circle1 {
+        @extend .circle;
+        background-color: #2f52e0; 
+    }
+    
+    .circle2 {
+        @extend .circle;
+        background-color: #f9cb40; 
+    }
+    
+    .circle3 {
+        @extend .circle;
+        background-color:$buttonColorPrimary; 
+    }
+
+
+    .circle-para{
+        color: $paragraphColorPrimary;
+    }
+    

@@ -1,0 +1,19 @@
+/* Defining all the varaibles color global to use them */
+@use './variables' as *;
+
+.app-hero-container{
+        display: flex;
+        justify-content: center;
+        background-color: #F2F5FA;
+        height: 31vh;
+}
+.app-hero-img{
+        height: 25rem;
+}
+
+
+.blank{
+        background-color: $backgroundColorWhite;
+        height: 30vh;  
+        margin-bottom: 0;
+}
